@@ -1,3 +1,4 @@
+import '../index.css';
 //------components--------------//
 import Profile from './profile/profile';
 import Friends from './frriends/friends';
