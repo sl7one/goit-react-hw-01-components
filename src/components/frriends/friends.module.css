@@ -1,0 +1,22 @@
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.friend__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

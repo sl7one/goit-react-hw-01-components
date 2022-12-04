@@ -1,0 +1,40 @@
+.stats {
+  display: flex;
+  flex-direction: row;
+  background-color: azure;
+  border: 3px solid gray;
+  list-style: none;
+  padding: 0;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gainsboro;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.list__item:not(:last-child) {
+  border-right: 1px solid gray;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 700;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
