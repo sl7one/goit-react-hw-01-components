@@ -25,22 +25,20 @@ export default function Transactions({ data }) {
 }
 
 function color(type) {
-  let color;
   switch (type) {
     case 'invoice':
-      color = { backgroundColor: 'green' };
-      break;
+      return { backgroundColor: 'green' };
     case 'withdrawal':
-      color = { backgroundColor: 'yellow' };
-      break;
+      return { backgroundColor: 'yellow' };
     case 'deposit':
-      color = { backgroundColor: 'blue' };
-      break;
+      return { backgroundColor: 'blue' };
     case 'payment':
-      color = { backgroundColor: 'orange' };
-      break;
+      return { backgroundColor: 'orange' };
+    default:
+      return {
+        backgroundColor: 'black',
+      };
   }
-  return color;
 }
 
 Transactions.propTypes = {
