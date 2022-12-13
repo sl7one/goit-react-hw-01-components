@@ -1,14 +1,15 @@
 import '../index.css';
 //------components--------------//
-import Profile from './profile/profile';
-import Friends from './frriends/friends';
-import Statistics from './statistics/statistics';
-import Transactions from './transactions/transactions';
+import Profile from './Profile/Profile';
+import Friends from './Friends/FriendList';
+import Statistics from './Statistics/Statistics';
+import Transactions from './Transactions/Transactions';
 //------------data-------------//
 import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
 import transData from '../data/transactions.json';
+import FriendList from './Friends/FriendList';
 //--------------------------------//
 
 export const App = () => {
@@ -28,12 +29,10 @@ export const App = () => {
         username={user.username}
         tag={user.tag}
         location={user.location}
-        followers={user.stats.followers}
-        wiews={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
       <Statistics title="Upload stats" data={data} />
-      <Friends data={friends} />
+      <FriendList data={friends} />
       <Transactions data={transData} />
     </div>
   );

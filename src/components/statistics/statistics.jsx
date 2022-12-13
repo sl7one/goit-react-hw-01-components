@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import css from './statistics.module.css';
+import css from './Statistics.module.css';
 
 export default function Statistics({ title, data }) {
   return (
     <section className={css.statistics}>
-      <h2 className="title">{title}</h2>
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className={css.stat__list}>
         {data.map(item => (
@@ -36,9 +36,9 @@ Statistics.propTypes = {
   title: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };

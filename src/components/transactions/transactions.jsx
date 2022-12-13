@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from '../transactions/transactions.module.css';
+import css from '../Transactions/Transactions.module.css';
 export default function Transactions({ data }) {
   return (
     <table className={css.transactionHistory}>
@@ -44,10 +44,10 @@ function color(type) {
 Transactions.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      type: PropTypes.string,
-      amount: PropTypes.string,
-      currency: PropTypes.string,
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };
